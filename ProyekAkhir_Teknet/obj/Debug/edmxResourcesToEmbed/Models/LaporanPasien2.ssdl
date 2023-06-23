@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Vaksin_TeknetModel7.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="LaporanPasien2">
+    <Key>
+      <PropertyRef Name="id_laporan" />
+    </Key>
+    <Property Name="id_laporan" Type="int" Nullable="false" />
+    <Property Name="Gejala" Type="char" MaxLength="300" Nullable="false" />
+    <Property Name="Jumlah_Pasien" Type="int" Nullable="false" />
+    <Property Name="Deskripsi" Type="char" MaxLength="500" />
+  </EntityType>
+  <EntityContainer Name="Vaksin_TeknetModel7StoreContainer">
+    <EntitySet Name="LaporanPasien2" EntityType="Self.LaporanPasien2" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

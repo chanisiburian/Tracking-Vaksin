@@ -1,0 +1,181 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/LoginLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<title>Kelompok 02</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {
+        font-family: "Times New Roman", Georgia, Serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Playfair Display";
+        letter-spacing: 5px;
+    }
+    .mySlides {
+        display: none;
+    }
+</style>
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+           <a href="#home" class="w3-bar-item w3-button">Tracking Vaksin</a>
+            <!-- Right-sided navbar links. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="#about" class="w3-bar-item w3-button">About</a>
+                <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact Us</a>
+                <a href="#menu" class="w3-bar-item w3-button">Login</a>
+                <br />
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+
+    <h1>Welcome To Tracking Vaccine</h1>
+    <div class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+        <img class="mySlides" src="~/Image/distribusi_vaksin1.jpg" width="1600" height="800">
+        <img class="mySlides" src="~/Image/distribusi_vaksin2.jpg" width="1600" height="800">
+        <img class="mySlides" src="~/Image/distribusi_vaksin3.jpg" width="1600" height="800">
+        <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+        <h1 class="w3-xxlarge">KELOMPOK 02</h1>
+    </div>
+    </div>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:1100px">
+
+        <!-- About Section -->
+        <div class="w3-row w3-padding-64" id="about">
+            <div class="w3-col m6 w3-padding-large w3-hide-small">
+                <img src="~/Image/corona3.jpeg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+            </div>
+
+            <div class="w3-col m6 w3-padding-large">
+                <h1 class="w3-center">Virus Corona</h1><br>
+                <h5 class="w3-center">Pengertian Corona</h5>
+                <p class="w3-large">Coronavirus atau disebut juga dengan virus corona merupakan keluarga besar virus yang mengakibatkan terjadinya infeksi saluran pernapasan atas ringan hingga sedang, seperti penyakit flu. Banyak orang terinfeksi virus ini, setidaknya satu kali dalam hidupnya.</p>
+            </div>
+        </div>
+
+        <div class="w3-row w3-padding-64" id="about">
+            <div class="w3-col m6 w3-padding-large w3-hide-small">
+                <img src="~/Image/vaccine.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+            </div>
+
+            <div class="w3-col m6 w3-padding-large">
+                <h1 class="w3-center">Vaksin</h1><br>
+                <h5 class="w3-center">Pengertian Vaksin</h5>
+                <p class="w3-large">Vaksin COVID-19 telah tersedia di Indonesia. Program vaksinasi pun mulai dijalankan oleh pemerintah sebagai salah upaya untuk memutus rantai penyebaran infeksi virus Corona dan menekan angka kasus COVID-19 yang masih terus meningkat. Sebagai panduan Anda, inilah beberapa informasi seputar vaksin COVID-19 yang perlu Anda ketahui. Vaksin adalah zat atau senyawa yang berfungsi untuk membentuk kekebalan tubuh terhadap suatu penyakit. Kandungan vaksin dapat berupa bakteri atau virus yang telah dilemahkan atau dimatikan, bisa juga berupa bagian dari bakteri atau virus tersebut.</p>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Login Section -->
+        <div class="w3-row w3-padding-64" id="menu">
+            <div class="w3-col l6 w3-padding-large">
+                <h1 class="w3-center">Ingin login sebagai ?</h1><br>
+                <div class="w2">
+                    @Html.ActionLink("Pasien", "Pasien")
+                    <p class="w3-text-grey">Anda akan login sebagai Pasien</p><br>
+                </div>
+                <div>
+                    @Html.ActionLink("Pengurus Rumah Sakit", "LoginRumahSakit")
+                    <p class="w3-text-grey">Anda akan login sebagai Pihak Rumah Sakit</p><br>
+                </div>
+                <div>
+                    @Html.ActionLink("BPOM", "LoginBPOM")
+                    <p class="w3-text-grey">Anda akan login sebagai BPOM</p><br>
+                </div>
+            </div>
+
+            <div class="w3-col l6 w3-padding-large">
+                <img src="~/Image/login.png" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Team Container -->
+        <div class="w3-container w3-padding-64 w3-center" id="team">
+            <h2>OUR TEAM</h2>
+            <p>KELOMPOK 2</p>
+
+            <div class="w3-row">
+                <br>
+
+                <div class="w3-quarter">
+                    <img src="/Image/asido.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+                    <h3>Asido Panjaitan</h3>
+                    <p>1139002</p>
+                </div>
+
+                <div class="w3-quarter">
+                    <img src="~/Image/chani.jpeg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+                    <h3>Chani Siburian</h3>
+                    <p>11319012</p>
+                </div>
+
+                <div class="w3-quarter">
+                    <img src="~/Image/sharon.jpeg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+                    <h3>Sharon Siahaan</h3>
+                    <p>11319020</p>
+                </div>
+
+                <div class="w3-quarter">
+                    <img src="~/Image/hotma.jpeg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+                    <h3>Hotma Aruan</h3>
+                    <p>11319042</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-container w3-padding-64 w3-center" id="team">
+                <div class="w3-quarter">
+                    <img src="~/Image/ajuanda.jpeg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+                    <h3>Ajuanda Sitorus</h3>
+                    <p>11319058</p>
+                </div>
+            </div>
+        </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-light-grey w3-padding-32">
+        <h3>32TI2  Kelompok 02</></h3>
+    </footer>
+    <footer class="w3-container w3-light-grey" style="padding:32px">
+        <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    </footer>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 5000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+</html>
+

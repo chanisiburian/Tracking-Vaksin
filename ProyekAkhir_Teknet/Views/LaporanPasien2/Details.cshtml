@@ -1,0 +1,43 @@
+﻿@model ProyekAkhir_Teknet.Models.LaporanPasien2
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/LoginLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LaporanPasien2</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Gejala)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gejala)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Jumlah_Pasien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Jumlah_Pasien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deskripsi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deskripsi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_laporan }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,75 @@
+﻿@model IEnumerable<ProyekAkhir_Teknet.Models.TambahVaksin>
+
+@{
+    ViewBag.Title = "lihatVaksin";
+    Layout = "~/Views/LoginLayout.cshtml";
+}
+
+<h1>DAFTAR VAKSIN</h1>`
+
+<br />
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #details {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #details td, #details th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #details tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            #details tr:hover {
+                background-color: #ddd;
+            }
+
+            #details th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+    <table id="details">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.No_Vaksin)</th>
+            <th>@Html.DisplayNameFor(model => model.Jenis_Vaksin)</th>
+            <th>@Html.DisplayNameFor(model => model.Gejala_Yang_Cocok)</th>
+            <th>@Html.DisplayNameFor(model => model.Jumlah_Produksi)</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.No_Vaksin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Jenis_Vaksin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gejala_Yang_Cocok)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Jumlah_Produksi)
+                </td>
+            </tr>
+        }
+    </table>
+    <br />
+    <p>
+        @Html.ActionLink("Kembali", "Dashboard")
+    </p>
+</body>
+</html>

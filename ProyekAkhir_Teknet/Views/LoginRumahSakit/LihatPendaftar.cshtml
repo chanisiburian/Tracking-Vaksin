@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ProyekAkhir_Teknet.Models.RegisterVaksin>
+
+@{
+    ViewBag.Title = "LihatPendaftar";
+    Layout = "~/Views/LoginLayout.cshtml";
+}
+
+<h2>LihatPendaftar</h2>
+
+<p>
+    @Html.ActionLink("Create Nrew", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Alamat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JenisKelamin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoHp)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alamat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JenisKelamin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoHp)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Nama }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Nama }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Nama })
+            </td>
+        </tr>
+    }
+
+</table>

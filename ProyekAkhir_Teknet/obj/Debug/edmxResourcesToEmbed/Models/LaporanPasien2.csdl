@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Vaksin_TeknetModel7" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="LaporanPasien2">
+    <Key>
+      <PropertyRef Name="id_laporan" />
+    </Key>
+    <Property Name="id_laporan" Type="Int32" Nullable="false" />
+    <Property Name="Gejala" Type="String" MaxLength="300" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Jumlah_Pasien" Type="Int32" Nullable="false" />
+    <Property Name="Deskripsi" Type="String" MaxLength="500" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="Vaksin_TeknetEntities13" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="LaporanPasien2" EntityType="Self.LaporanPasien2" />
+  </EntityContainer>
+</Schema>

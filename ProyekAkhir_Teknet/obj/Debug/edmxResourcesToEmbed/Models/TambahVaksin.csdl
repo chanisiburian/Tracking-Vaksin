@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Vaksin_TeknetModel6" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TambahVaksin">
+    <Key>
+      <PropertyRef Name="No_Vaksin" />
+    </Key>
+    <Property Name="No_Vaksin" Type="Int32" Nullable="false" />
+    <Property Name="Jenis_Vaksin" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Gejala_Yang_Cocok" Type="String" MaxLength="500" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Jumlah_Produksi" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Vaksin_TeknetEntities12" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TambahVaksin" EntityType="Self.TambahVaksin" />
+  </EntityContainer>
+</Schema>

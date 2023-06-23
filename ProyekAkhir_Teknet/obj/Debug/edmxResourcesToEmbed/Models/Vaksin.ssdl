@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Vaksin_TeknetModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Vaksin_Teknet.dbo.Vaksin' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Vaksin">
+    <Key>
+      <PropertyRef Name="No_Vaksin" />
+      <PropertyRef Name="Jenis_Vaksin" />
+    </Key>
+    <Property Name="No_Vaksin" Type="int" Nullable="false" />
+    <Property Name="Jenis_Vaksin" Type="char" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Vaksin_TeknetModel2StoreContainer">
+    <EntitySet Name="Vaksin" EntityType="Self.Vaksin" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Vaksin].[No_Vaksin] AS [No_Vaksin], 
+    [Vaksin].[Jenis_Vaksin] AS [Jenis_Vaksin]
+    FROM [dbo].[Vaksin] AS [Vaksin]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

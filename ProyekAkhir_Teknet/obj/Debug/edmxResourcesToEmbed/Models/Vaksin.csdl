@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Vaksin_TeknetModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Vaksin">
+    <Key>
+      <PropertyRef Name="No_Vaksin" />
+      <PropertyRef Name="Jenis_Vaksin" />
+    </Key>
+    <Property Name="No_Vaksin" Type="Int32" Nullable="false" />
+    <Property Name="Jenis_Vaksin" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="VaksinModel" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Vaksins" EntityType="Self.Vaksin" />
+  </EntityContainer>
+</Schema>

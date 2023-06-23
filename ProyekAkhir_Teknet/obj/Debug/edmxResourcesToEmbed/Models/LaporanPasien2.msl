@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Vaksin_TeknetModel7StoreContainer" CdmEntityContainer="Vaksin_TeknetEntities13">
+    <EntitySetMapping Name="LaporanPasien2">
+      <EntityTypeMapping TypeName="Vaksin_TeknetModel7.LaporanPasien2">
+        <MappingFragment StoreEntitySet="LaporanPasien2">
+          <ScalarProperty Name="id_laporan" ColumnName="id_laporan" />
+          <ScalarProperty Name="Gejala" ColumnName="Gejala" />
+          <ScalarProperty Name="Jumlah_Pasien" ColumnName="Jumlah_Pasien" />
+          <ScalarProperty Name="Deskripsi" ColumnName="Deskripsi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

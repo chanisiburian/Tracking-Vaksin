@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ProyekAkhir_Teknet.LaporanPasien>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/LoginLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Gejala_Pasien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Jumlah_Pasien)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gejala_Pasien)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Jumlah_Pasien)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Deskripsi_Laporan }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Deskripsi_Laporan }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Deskripsi_Laporan })
+        </td>
+    </tr>
+}
+
+</table>

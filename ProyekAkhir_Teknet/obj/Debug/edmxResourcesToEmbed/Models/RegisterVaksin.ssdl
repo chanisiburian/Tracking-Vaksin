@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Vaksin_TeknetModel3.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="RegisterVaksin">
+    <Key>
+      <PropertyRef Name="Nama" />
+    </Key>
+    <Property Name="Nama" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="Alamat" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="JenisKelamin" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="NoHp" Type="char" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Vaksin_TeknetModel3StoreContainer">
+    <EntitySet Name="RegisterVaksin" EntityType="Self.RegisterVaksin" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,74 @@
+﻿@model IEnumerable<ProyekAkhir_Teknet.Models.LaporanPasien2>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/LoginLayout.cshtml";
+}
+
+<h2>LihatGejala</h2>
+
+<br />
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #see {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #see td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #see tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            #see tr:hover {
+                background-color: #ddd;
+            }
+
+            #see th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+    <table id="see">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Gejala)</th>
+            <th>@Html.DisplayNameFor(model => model.Jumlah_Pasien)</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Gejala)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Jumlah_Pasien)
+    </td>
+    <td>
+        @Html.ActionLink("Distribusikan Vaksin", "TambahVaksin")
+
+    </td>
+</tr>}
+
+
+    </table>
+    <br />
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <br />
+    <p>@Html.ActionLink("Kembali", "Dashboard")</p>
+</body>
+</html>

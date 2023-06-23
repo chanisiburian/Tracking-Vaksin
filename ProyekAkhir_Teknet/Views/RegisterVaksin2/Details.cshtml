@@ -1,0 +1,71 @@
+﻿@model ProyekAkhir_Teknet.Models.RegisterVaksin2
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/LoginLayout.cshtml";
+}
+
+<h2>Details</h2>
+<br />
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #details {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #details td, #details th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #details tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            #details tr:hover {
+                background-color: #ddd;
+            }
+
+            #details th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+    <table id="details">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.nama)</th>
+            <th>@Html.DisplayNameFor(model => model.jenis_kelamin)</th>
+            <th>@Html.DisplayNameFor(model => model.no_hp)</th>
+            <th>@Html.DisplayFor(model => model.no_hp)</th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.nama)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.jenis_kelamin)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.no_hp)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.alamat)
+            </td>
+        </tr>
+    </table>
+    <br />
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id_daftar }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

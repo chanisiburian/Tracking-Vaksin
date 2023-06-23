@@ -1,0 +1,74 @@
+﻿@model ProyekAkhir_Teknet.Models.TambahVaksin
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/LoginLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #customers td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #customers tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            #customers tr:hover {
+                background-color: #ddd;
+            }
+
+            #customers th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+    <table id="customers">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Jenis_Vaksin)</th>
+            <th>@Html.DisplayNameFor(model => model.Gejala_Yang_Cocok)</th>
+            <th>@Html.DisplayNameFor(model => model.Jumlah_Produksi)</th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Jenis_Vaksin)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Gejala_Yang_Cocok)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Jumlah_Produksi)
+            </td>
+        </tr>
+    </table>
+    <br />
+
+    <h3>Are you sure you want to delete this?</h3>
+    <br />
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</body>
+</html>
